@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+Dir.chdir("bin")
+
+require '../lib/commands'
+Commands.new
