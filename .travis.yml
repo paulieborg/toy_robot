@@ -1,7 +1,10 @@
 sudo: false
 language: ruby
 rvm:
-  - 2.3.0
+- 2.3.0
 before_install: gem install bundler
 script: bundle exec rake
 bundler_args: "--without docs release repl"
+env:
+  global:
+    secure: Yn/QRozaiiR3mPLH7HlLv3b5FOvY8aEfCtTFdPuGUK6bWQ9hG3YhX603q2hVJ5vzXZfKcfhbOIKoWC8TROCN7Utpcc/jmQxDdJH57k9naSZLhsCo41Fcfv8hUH32ahm0rwyCclwYmJTR2zj6JntlZXY8u1tetFp4zXfZSdar/TjK7bJaef6qP2f6L2EGjlKqJhOo0GinmS651ETg0J+KDbhM8EvW6w3rNHegXqItIYLOzNeH2KyrlblTuEllfDuvHvfg/8s/ymtZS7DKbjS08gT3W13uXZsx/JiGvetAq8loHDfzcIvgAg0xgl+FMe2UxCMvb1O+cqO4bh6/mrgVC1leYy3J3/IKAeNR5bdQiGqsdtKCvC+s7sbOWJ/UgwotPgq5F2tLmHuzKGk4R9JqBJ9AC9TmPLltuKyWAba/3r4oOw2NeSposXBXuKtt7VO8OpLBfivmgiOc4Krumm9+tEobhIv9ShdzfiK9f+nDSFa134Uuqhduf1BTsbgz8W6Z2R8Y5rxbrGiq/iZiSsBoxnAe24FC35K8ogTtyQU9p7ydTq0cINTXPS5/1eMuy7H8aPEK5prVAN5Ivodvi5FAY7cK8msNAi7tRuT0gW20z84nSLcJxEjTtJ+MkFC9OtU77VXxMAfvFisaIl0CAiIhZ9W2pgiAF0+az/UHiUd8FGI=
