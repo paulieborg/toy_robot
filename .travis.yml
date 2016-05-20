@@ -6,5 +6,5 @@ rvm:
 - 2.2.2
 - 2.2.3
 - 2.3.0
-before_install: cd paulieborg
+before_install: pwd; ls -ltr
 script: bundle exec rake
