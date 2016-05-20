@@ -1,5 +1,5 @@
-require_relative '../lib/place.rb'
-require_relative '../lib/state.rb'
+require_relative '../../lib/place.rb'
+require_relative '../../lib/state.rb'
 
 describe Place do
 

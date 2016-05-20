@@ -1,22 +1,22 @@
-require_relative '../lib/state.rb'
-require_relative '../lib/move.rb'
+require_relative '../../lib/state.rb'
+require_relative '../../lib/move.rb'
 
 describe Move do
 
   let(:stdout) { instance_double(IO) }
 
   let(:north_start) { State.new(0, 0, 'NORTH') }
-  let(:north_fall) { State.new(5, 5, 'NORTH') }
-  let(:north_move) { {x: 1, y: 0} }
+  let(:north_fall) { State.new(4, 4, 'NORTH') }
+  let(:north_move) { {x: 0, y: 1} }
 
   let(:east_start) { State.new(0, 0, 'EAST') }
-  let(:east_move) { {x: 0, y: 1} }
+  let(:east_move) { {x: 1, y: 0} }
 
-  let(:south_start) { State.new(5, 5, 'SOUTH') }
-  let(:south_move) { {x: 4, y: 5} }
+  let(:south_start) { State.new(4, 4, 'SOUTH') }
+  let(:south_move) { {x: 4, y: 3} }
 
-  let(:west_start) { State.new(5, 5, 'WEST') }
-  let(:west_move) { {x: 5, y: 4} }
+  let(:west_start) { State.new(4, 4, 'WEST') }
+  let(:west_move) { {x: 3, y: 4} }
 
   before(:each) do
     allow(stdout).to receive(:puts)
@@ -43,7 +43,7 @@ describe Move do
   end
 
   it 'should not move if the robot will fall' do
-    expect(stdout).to receive(:puts).with('Cannot Move Further - Robot will fail')
+    expect(stdout).to receive(:puts).with('Cannot Move Further - Robot will fall')
     described_class.new.execute(north_fall, stdout)
   end
 

@@ -1,5 +1,5 @@
-require_relative '../lib/change_direction.rb'
-require_relative '../lib/state.rb'
+require_relative '../../lib/change_direction.rb'
+require_relative '../../lib/state.rb'
 
 describe ChangeDirection do
 

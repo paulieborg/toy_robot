@@ -2,7 +2,7 @@ require 'rspec'
 require 'simplecov'
 require "codeclimate-test-reporter"
 
-SimpleCov.start
+#SimpleCov.start
 CodeClimate::TestReporter.start
 
 RSpec.configure do |config|

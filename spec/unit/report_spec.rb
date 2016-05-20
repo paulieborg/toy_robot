@@ -1,5 +1,5 @@
-require_relative '../lib/state.rb'
-require_relative '../lib/report.rb'
+require_relative '../../lib/state.rb'
+require_relative '../../lib/report.rb'
 
 describe Report do
 

@@ -1,4 +1,4 @@
-require_relative '../lib/state.rb'
+require_relative '../../lib/state.rb'
 
 describe State do
 
@@ -19,7 +19,7 @@ describe State do
     expect(described_class.new(x_coord, y_coord, initial_direction).falling?).to be(false)
   end
 
-  it 'should test if the robot will fall if a coordinate is > 5' do
+  it 'should test if the robot will fall if a coordinate is > 4' do
     expect(described_class.new(x_coord_fall, y_coord, initial_direction).falling?).to be(true)
   end
 

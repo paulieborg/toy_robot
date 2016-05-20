@@ -14,7 +14,7 @@ class State
   def falling?
     falling = false
     @location.each do |_key, value|
-      falling = true unless value.between?(0, 5)
+      falling = true unless value.between?(0, 4)
     end
     falling
   end
