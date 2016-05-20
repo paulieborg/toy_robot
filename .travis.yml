@@ -1,7 +1,9 @@
 sudo: false
 language: ruby
 rvm:
-- 2.3.0
+- 2.1.9
+- 2.2.5
+- 2.3.1
 before_install: gem install bundler
 script: bundle exec rake
 bundler_args: "--without docs release repl"
