@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/paulieborg/toy_robot.png?branch=master)](https://travis-ci.org/paulieborg/toy_robot)
+
+
 -----------
 # Toy Robot Simulator
 
