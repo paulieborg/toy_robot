@@ -6,7 +6,5 @@ rvm:
 - 2.2.2
 - 2.2.3
 - 2.3.0
+before_install: cd paulieborg/toy_robot
 script: bundle exec rake
-env:
-  global:
-    - TRAVIS_BUILD_DIR="paulieborg/toy_robot"
