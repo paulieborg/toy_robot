@@ -18,10 +18,6 @@ describe Move do
   let(:west_start) { State.new(4, 4, 'WEST') }
   let(:west_move) { {x: 3, y: 4} }
 
-  before(:each) do
-    allow(stdout).to receive(:puts)
-  end
-
   it 'should move 1 space north' do
     described_class.new.execute(north_start)
     expect(north_start.location).to eq(north_move)
@@ -43,8 +39,7 @@ describe Move do
   end
 
   it 'should not move if the robot will fall' do
-    expect(stdout).to receive(:puts).with('Cannot Move Further - Robot will fall')
-    described_class.new.execute(north_fall, stdout)
+    expect{described_class.new.execute(north_fall)}.to output("Cannot Move Further - Robot will fall\n").to_stdout
   end
 
 

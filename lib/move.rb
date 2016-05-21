@@ -1,6 +1,6 @@
 class Move
 
-  def execute(state, stdout=$stdout)
+  def execute(state)
 
     original_location = state.location
 
@@ -21,7 +21,7 @@ class Move
     state.location = current_location
 
     if state.falling?
-      stdout.puts 'Cannot Move Further - Robot will fall'
+      puts 'Cannot Move Further - Robot will fall'
       state.location = original_location
       return
     end

@@ -5,9 +5,9 @@ require_relative 'report.rb'
 
 class Commands
 
-  def initialize
+  def initialize(stdin=$stdin)
 
-    while command = gets.chomp.split(' ')
+    while command = stdin.gets.chomp.split(' ')
 
       action = command.shift
 
@@ -29,9 +29,9 @@ class Commands
             ChangeDirection.new.turn(:left, @state)
           when 'REPORT'
             Report.new.execute(@state)
-            exit
+            return
           when /quit|exit|q|x/
-            exit
+            return
           else
             puts 'Invalid Command'
         end
