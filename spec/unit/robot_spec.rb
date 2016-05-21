@@ -12,6 +12,10 @@ describe Robot do
   let(:quit) { "quit\n" }
   let(:invalid) { "INVALID\n" }
 
+  let(:input) {
+    "PLACE 0,0,NORTH\nMOVE\nREPORT\n"
+  }
+
   before(:each) do
     allow(stdin).to receive(:gets)
   end
@@ -50,6 +54,10 @@ describe Robot do
   it 'should tell you if you gave it an invalid command' do
     allow(stdin).to receive(:gets).and_return(invalid, quit)
     expect{described_class.new(stdin).interactive}.to output("Invalid Command\n").to_stdout
+  end
+
+  it 'should also take input from a file' do
+    expect{described_class.new.input_file(input)}.to output("Output: 0,1,NORTH\n").to_stdout
   end
 end
 
