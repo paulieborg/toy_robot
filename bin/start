@@ -1,6 +1,18 @@
 #!/usr/bin/env ruby
-
 Dir.chdir('bin')
 
+require 'optparse'
 require '../lib/robot'
-Robot.new.interactive
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = 'Usage: start [-f file_name]'
+  opts.on('-f', '--input-file FILE', 'Path to Input File') { |v| options[:file_name] = v }
+end.parse!
+
+if options[:file_name]
+  Robot.new.input_file(File.read(File.join('..', 'input', options[:file_name])))
+else
+  Robot.new.interactive
+end
+

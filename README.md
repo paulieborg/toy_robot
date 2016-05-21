@@ -13,6 +13,7 @@
 cd toy_robot
 bundle install
 ./bin/start
+./bin/start -f test_c.txt
 ```
 
 **TEST**
