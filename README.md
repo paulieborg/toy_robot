@@ -9,13 +9,15 @@
 ### Usage
 
 **RUN**
-```cd toy_robot
+```
+cd toy_robot
 bundle install
 ./bin/start
 ```
 
 **TEST**
-```cd toy_robot
+```
+cd toy_robot
 bundle install
 rake spec
 rake test_a
@@ -56,21 +58,24 @@ Any move that would cause the robot to fall must be ignored.
 
 ### Example Input and Output:
 1.
-```PLACE 0,0,NORTH
+```
+PLACE 0,0,NORTH
 MOVE
 REPORT
 Output: 0,1,NORTH
 ```
 
 2.
-```PLACE 0,0,NORTH
+```
+PLACE 0,0,NORTH
 LEFT
 REPORT
 Output: 0,0,WEST
 ```
 
 3.
-```PLACE 1,2,EAST
+```
+PLACE 1,2,EAST
 MOVE
 MOVE
 LEFT
