@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-Dir.chdir("bin")
+Dir.chdir('bin')
 
-require '../lib/commands'
-Commands.new
+require '../lib/robot'
+Robot.new.interactive

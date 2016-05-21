@@ -3,11 +3,15 @@ require_relative 'move.rb'
 require_relative 'change_direction.rb'
 require_relative 'report.rb'
 
-class Commands
+class Robot
 
   def initialize(stdin=$stdin)
+    @stdin = stdin
+  end
 
-    while command = stdin.gets.chomp.split(' ')
+  def interactive
+
+    while command = @stdin.gets.chomp.split(' ')
 
       action = command.shift
 
