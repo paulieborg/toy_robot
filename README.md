@@ -11,7 +11,8 @@
 **RUN**
 ```cd toy_robot
 bundle install
-./bin/start```
+./bin/start
+```
 
 **TEST**
 ```cd toy_robot
@@ -19,7 +20,8 @@ bundle install
 rake spec
 rake test_a
 rake test_b
-rake test_c```
+rake test_c
+```
 
 ### Description:
 
@@ -57,13 +59,15 @@ Any move that would cause the robot to fall must be ignored.
 ```PLACE 0,0,NORTH
 MOVE
 REPORT
-Output: 0,1,NORTH```
+Output: 0,1,NORTH
+```
 
 2.
 ```PLACE 0,0,NORTH
 LEFT
 REPORT
-Output: 0,0,WEST```
+Output: 0,0,WEST
+```
 
 3.
 ```PLACE 1,2,EAST
@@ -72,4 +76,5 @@ MOVE
 LEFT
 MOVE
 REPORT
-Output: 3,3,NORTH```
+Output: 3,3,NORTH
+```
