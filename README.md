@@ -9,17 +9,17 @@
 ### Usage
 
 **RUN**
-`cd toy_robot`
-`bundle install`
-`./bin/start`
+```cd toy_robot
+bundle install
+./bin/start```
 
 **TEST**
-`cd toy_robot`
-`bundle install`
-`rake spec`
-`rake test_a`
-`rake test_b`
-`rake test_c`
+```cd toy_robot
+bundle install
+rake spec
+rake test_a
+rake test_b
+rake test_c```
 
 ### Description:
 
