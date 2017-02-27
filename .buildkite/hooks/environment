@@ -1,0 +1,1 @@
+echo "This is the environment hook in the git repo"
